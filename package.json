@@ -27,6 +27,7 @@
     "build": "npm run cleanup && npm run rollup",
     "build:min": "npm run build && npm run min",
     "cleanup": "rm -rf dist",
+    "gzip": "gzip -9 -k dist/*",
     "min": "uglifyjs dist/api.js -m -o dist/api.min.js",
     "prepublish": "npm run build:min",
     "rollup": "rollup -c"
