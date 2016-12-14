@@ -7,7 +7,13 @@ import resolve from 'rollup-plugin-node-resolve';
 export default {
   dest: './dist/api.js',
   entry: 'index.js',
+  external: [
+    '@scola/core'
+  ],
   format: 'umd',
+  globals: {
+    '@scola/core': 'core'
+  },
   moduleName: 'api',
   plugins: [
     builtins(),

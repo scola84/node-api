@@ -1,10 +1,13 @@
+import { loadI18n as loadI18nHttp } from '@scola/api-http';
+import { loadI18n as loadI18nRouter } from '@scola/api-router';
+import { loadI18n as loadI18nWs } from '@scola/api-ws';
+
 export {
   HttpConnection,
   HttpConnector,
   ServerRequest,
   ServerResponse,
-  parseHeader,
-  data as httpData
+  parseHeader
 } from '@scola/api-http';
 
 export {
@@ -15,23 +18,17 @@ export {
 } from '@scola/api-log';
 
 export {
-  ClientFactory,
-  ServerFactory,
-  PubSub,
-  clientRoutes,
-  pubsubRoutes,
-  serverRoutes,
-  data as modelData
-} from '@scola/api-model';
-
-export {
   Router,
-  handleError,
-  data as routerData
+  handleError
 } from '@scola/api-router';
 
 export {
   WsConnection,
-  WsConnector,
-  data as wsData
+  WsConnector
 } from '@scola/api-ws';
+
+export function loadI18n() {
+  loadI18nHttp();
+  loadI18nRouter();
+  loadI18nWs();
+}

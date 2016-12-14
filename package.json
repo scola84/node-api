@@ -10,7 +10,6 @@
   "dependencies": {
     "@scola/api-http": "^3.1.0",
     "@scola/api-log": "^1.0.3",
-    "@scola/api-model": "^2.0.1",
     "@scola/api-router": "^2.1.0",
     "@scola/api-ws": "^4.1.0"
   },
