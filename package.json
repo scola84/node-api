@@ -8,15 +8,15 @@
   "main": "./dist/api.js",
   "jsnext:main": "index.js",
   "dependencies": {
-    "@scola/api-http": "^4.0.1",
-    "@scola/api-log": "^1.0.3",
-    "@scola/api-router": "^3.0.1",
-    "@scola/api-ws": "^5.0.1"
+    "@scola/api-http": "^4.1.0",
+    "@scola/api-log": "^1.1.0",
+    "@scola/api-router": "^3.1.0",
+    "@scola/api-ws": "^5.1.0"
   },
   "devDependencies": {
     "rollup": "^0.37.0",
-    "rollup-plugin-buble": "^0.15.0",
-    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-buble": "^0.14.0",
+    "rollup-plugin-commonjs": "^6.0.0",
     "rollup-plugin-node-builtins": "^2.0.0",
     "rollup-plugin-node-globals": "^1.1.0",
     "rollup-plugin-node-resolve": "^2.0.0",
@@ -27,6 +27,7 @@
     "build:min": "npm run build && npm run min",
     "cleanup": "rm -rf dist",
     "gzip": "gzip -9 -k dist/*",
+    "link": "npm link @scola/api-http @scola/api-log @scola/api-router @scola/api-ws",
     "min": "uglifyjs dist/api.js -m -o dist/api.min.js",
     "prepublish": "npm run build:min",
     "rollup": "rollup -c"
