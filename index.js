@@ -1,6 +1,17 @@
-import { loadI18n as loadI18nHttp } from '@scola/api-http';
-import { loadI18n as loadI18nRouter } from '@scola/api-router';
-import { loadI18n as loadI18nWs } from '@scola/api-ws';
+import { load as loadHttp } from '@scola/api-http';
+import { load as loadRouter } from '@scola/api-router';
+import { load as loadWs } from '@scola/api-ws';
+
+export {
+  formdataCodec,
+  formdataFilter,
+  jsonCodec,
+  jsonFilter,
+  msgpackCodec,
+  msgpackFilter,
+  urlencodedCodec,
+  urlencodedFilter
+} from '@scola/api-codec';
 
 export {
   HttpConnection,
@@ -11,10 +22,12 @@ export {
 } from '@scola/api-http';
 
 export {
-  ConnectionHandler,
-  ConnectorHandler,
-  RouterHandler,
-  ConsoleLogger
+  ConsoleLogger,
+  logClose,
+  logConnection,
+  logError,
+  logOpen,
+  logRequest
 } from '@scola/api-log';
 
 export {
@@ -27,8 +40,8 @@ export {
   WsConnector
 } from '@scola/api-ws';
 
-export function loadI18n() {
-  loadI18nHttp();
-  loadI18nRouter();
-  loadI18nWs();
+export function load(i18n) {
+  loadHttp(i18n);
+  loadRouter(i18n);
+  loadWs(i18n);
 }

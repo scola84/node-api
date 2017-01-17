@@ -4,16 +4,14 @@ import commonjs from 'rollup-plugin-commonjs';
 import globals from 'rollup-plugin-node-globals';
 import resolve from 'rollup-plugin-node-resolve';
 
+const name = process.argv.indexOf('-w') === -1 ?
+  'api.js' :
+  'api.min.js';
+
 export default {
-  dest: './dist/api.js',
+  dest: './dist/' + name,
   entry: 'index.js',
-  external: [
-    '@scola/core'
-  ],
   format: 'umd',
-  globals: {
-    '@scola/core': 'core'
-  },
   moduleName: 'api',
   plugins: [
     builtins(),
