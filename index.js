@@ -3,14 +3,13 @@ import { load as loadRouter } from '@scola/api-router';
 import { load as loadWs } from '@scola/api-ws';
 
 export {
-  formdataCodec,
-  formdataFilter,
+  formDataFilter,
   jsonCodec,
   jsonFilter,
-  msgpackCodec,
-  msgpackFilter,
-  urlencodedCodec,
-  urlencodedFilter
+  msgPackCodec,
+  msgPackFilter,
+  sodiumCodec,
+  urlEncodedFilter
 } from '@scola/api-codec';
 
 export {
@@ -18,6 +17,7 @@ export {
   HttpConnector,
   ServerRequest,
   ServerResponse,
+  Writer,
   parseHeader
 } from '@scola/api-http';
 
