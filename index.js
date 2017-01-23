@@ -40,8 +40,8 @@ export {
   WsConnector
 } from '@scola/api-ws';
 
-export function load(i18n) {
-  loadHttp(i18n);
-  loadRouter(i18n);
-  loadWs(i18n);
+export function load(app) {
+  loadHttp(app);
+  loadRouter(app);
+  loadWs(app);
 }
