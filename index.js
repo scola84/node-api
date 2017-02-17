@@ -3,6 +3,15 @@ import { load as loadRouter } from '@scola/api-router';
 import { load as loadWs } from '@scola/api-ws';
 
 export {
+  Cache,
+  cacheClient,
+  readListCache,
+  readObjectCache,
+  writeListCache,
+  writeObjectCache
+} from '@scola/api-cache';
+
+export {
   formDataFilter,
   jsonCodec,
   jsonFilter,
