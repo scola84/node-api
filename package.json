@@ -30,7 +30,7 @@
     "build:min": "npm run build && npm run min",
     "cleanup": "rm -rf dist",
     "gzip": "gzip -9 -k dist/*",
-    "link": "npm link @scola/api-cache @scola/api-codec @scola/api-http @scola/api-log @scola/api-router @scola/api-ws",
+    "link": "npm link @scola/api-cache @scola/api-codec @scola/api-http @scola/api-pubsub @scola/api-router @scola/api-ws",
     "min": "uglifyjs dist/api.js -m -o dist/api.min.js",
     "prepublish": "npm run build:min",
     "rollup": "rollup -c"

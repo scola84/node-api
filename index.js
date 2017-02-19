@@ -5,10 +5,10 @@ import { load as loadWs } from '@scola/api-ws';
 export {
   Cache,
   cacheClient,
-  readListCache,
-  readObjectCache,
-  writeListCache,
-  writeObjectCache
+  getList,
+  getObject,
+  setList,
+  setObject
 } from '@scola/api-cache';
 
 export {
@@ -31,13 +31,12 @@ export {
 } from '@scola/api-http';
 
 export {
-  ConsoleLogger,
-  logClose,
-  logConnection,
-  logError,
-  logOpen,
-  logRequest
-} from '@scola/api-log';
+  PubSub,
+  publish,
+  subscribe,
+  subscribeList,
+  subscribeObject
+} from '@scola/api-pubsub';
 
 export {
   Router,
