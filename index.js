@@ -5,6 +5,8 @@ import { load as loadWs } from '@scola/api-ws';
 export {
   Cache,
   cacheClient,
+  cacheList,
+  cacheObject,
   getList,
   getObject,
   getTotal,
