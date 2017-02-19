@@ -7,8 +7,10 @@ export {
   cacheClient,
   getList,
   getObject,
+  getTotal,
   setList,
-  setObject
+  setObject,
+  setTotal
 } from '@scola/api-cache';
 
 export {
