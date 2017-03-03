@@ -2,7 +2,7 @@ import { load as loadHttp } from '@scola/api-http';
 import { load as loadRouter } from '@scola/api-router';
 import { load as loadWs } from '@scola/api-ws';
 
-export {
+import {
   Cache,
   cacheClient,
   cacheList,
@@ -15,7 +15,7 @@ export {
   setTotal
 } from '@scola/api-cache';
 
-export {
+import {
   formDataFilter,
   jsonCodec,
   jsonFilter,
@@ -25,7 +25,7 @@ export {
   urlEncodedFilter
 } from '@scola/api-codec';
 
-export {
+import {
   HttpConnection,
   HttpConnector,
   ServerRequest,
@@ -34,7 +34,7 @@ export {
   parseHeader
 } from '@scola/api-http';
 
-export {
+import {
   PubSub,
   publish,
   subscribe,
@@ -42,18 +42,54 @@ export {
   subscribeObject
 } from '@scola/api-pubsub';
 
-export {
+import {
   Router,
   handleError
 } from '@scola/api-router';
 
-export {
+import {
   WsConnection,
   WsConnector
 } from '@scola/api-ws';
 
-export function load(app) {
+function load(app) {
   loadHttp(app);
   loadRouter(app);
   loadWs(app);
 }
+
+export {
+  Cache,
+  cacheClient,
+  cacheList,
+  cacheObject,
+  getList,
+  getObject,
+  getTotal,
+  setList,
+  setObject,
+  setTotal,
+  formDataFilter,
+  jsonCodec,
+  jsonFilter,
+  msgPackCodec,
+  msgPackFilter,
+  sodiumCodec,
+  urlEncodedFilter,
+  HttpConnection,
+  HttpConnector,
+  ServerRequest,
+  ServerResponse,
+  Writer,
+  parseHeader,
+  PubSub,
+  publish,
+  subscribe,
+  subscribeList,
+  subscribeObject,
+  Router,
+  handleError,
+  WsConnection,
+  WsConnector,
+  load
+};
