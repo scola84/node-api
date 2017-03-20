@@ -3,14 +3,12 @@ import { load as loadRouter } from '@scola/api-router';
 import { load as loadWs } from '@scola/api-ws';
 
 import {
-  Cache,
-  cacheClient,
+  CacheClient,
+  CacheFactory,
   getList,
   setList,
   getObject,
-  setObject,
-  getTotal,
-  setTotal
+  setObject
 } from '@scola/api-cache';
 
 import {
@@ -33,7 +31,7 @@ import {
 } from '@scola/api-http';
 
 import {
-  PubSub,
+  PubSubFactory,
   publish,
   subscribe,
   subscribeList,
@@ -57,14 +55,12 @@ function load(app) {
 }
 
 export {
-  Cache,
-  cacheClient,
+  CacheClient,
+  CacheFactory,
   getList,
   getObject,
-  getTotal,
   setList,
   setObject,
-  setTotal,
   formDataFilter,
   jsonCodec,
   jsonFilter,
@@ -78,7 +74,7 @@ export {
   ServerResponse,
   Writer,
   parseHeader,
-  PubSub,
+  PubSubFactory,
   publish,
   subscribe,
   subscribeList,
