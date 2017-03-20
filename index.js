@@ -5,13 +5,11 @@ import { load as loadWs } from '@scola/api-ws';
 import {
   Cache,
   cacheClient,
-  cacheList,
-  cacheObject,
   getList,
-  getObject,
-  getTotal,
   setList,
+  getObject,
   setObject,
+  getTotal,
   setTotal
 } from '@scola/api-cache';
 
@@ -61,8 +59,6 @@ function load(app) {
 export {
   Cache,
   cacheClient,
-  cacheList,
-  cacheObject,
   getList,
   getObject,
   getTotal,
