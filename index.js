@@ -3,8 +3,9 @@ import { load as loadRouter } from '@scola/api-router';
 import { load as loadWs } from '@scola/api-ws';
 
 import {
-  CacheClient,
   CacheFactory,
+  MemCacheClient,
+  RedisClient,
   getList,
   setList,
   getObject,
@@ -55,8 +56,9 @@ function load(app) {
 }
 
 export {
-  CacheClient,
   CacheFactory,
+  MemCacheClient,
+  RedisClient,
   getList,
   getObject,
   setList,
