@@ -5,6 +5,7 @@ import { load as loadWs } from '@scola/api-ws';
 import {
   CacheFactory,
   MemCacheClient,
+  MemoryClient,
   RedisClient,
   getList,
   setList,
@@ -13,12 +14,14 @@ import {
 } from '@scola/api-cache';
 
 import {
+  formDataCodec,
   formDataFilter,
   jsonCodec,
   jsonFilter,
   msgPackCodec,
   msgPackFilter,
   sodiumCodec,
+  urlEncodedCodec,
   urlEncodedFilter
 } from '@scola/api-codec';
 
@@ -58,17 +61,20 @@ function load(app) {
 export {
   CacheFactory,
   MemCacheClient,
+  MemoryClient,
   RedisClient,
   getList,
   getObject,
   setList,
   setObject,
+  formDataCodec,
   formDataFilter,
   jsonCodec,
   jsonFilter,
   msgPackCodec,
   msgPackFilter,
   sodiumCodec,
+  urlEncodedCodec,
   urlEncodedFilter,
   HttpConnection,
   HttpConnector,
