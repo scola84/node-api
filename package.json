@@ -9,7 +9,7 @@
   "jsnext:main": "./index.js",
   "dependencies": {
     "@scola/api-cache": "^1.1.0",
-    "@scola/api-codec": "^2.1.0",
+    "@scola/api-codec": "^2.1.1",
     "@scola/api-http": "^5.1.1",
     "@scola/api-pubsub": "^1.0.1",
     "@scola/api-router": "^4.1.1",
