@@ -33,14 +33,16 @@
     "uglify-js": "^2.8.23"
   },
   "scripts": {
-    "build": "npm run cleanup && npm run rollup --",
-    "build:dev": "npm run build -- -w -m",
-    "build:min": "npm run build && npm run min",
-    "cleanup": "rm -rf dist",
-    "gzip": "gzip -9 -k dist/*",
+    "build": "npm run prepare && npm run rollup --",
+    "build:dev": "npm run gzip:pre && npm run build -- -w -m",
+    "build:min": "npm run build:pub && npm run gzip",
+    "build:pub": "npm run build && npm run min && npm run gzip:pre",
+    "gzip": "gzip -9 -fkr dist/*",
+    "gzip:pre": "find dist/ -name '*.gz' -delete",
     "link": "npm link @scola/api-cache @scola/api-codec @scola/api-http @scola/api-pubsub @scola/api-router @scola/api-ws @scola/error @scola/websocket",
     "min": "uglifyjs dist/api.js -m -o dist/api.min.js",
-    "prepublish": "npm run build:min",
+    "prepare": "mkdir -p dist/ && find dist/ -name '*.map' -delete",
+    "prepublish": "npm run build:pub",
     "rollup": "rollup -c"
   }
 }
