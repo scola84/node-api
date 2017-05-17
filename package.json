@@ -13,7 +13,7 @@
     "@scola/api-http": "^5.1.1",
     "@scola/api-pubsub": "^1.0.1",
     "@scola/api-router": "^4.1.1",
-    "@scola/api-ws": "^6.1.1"
+    "@scola/api-ws": "^6.1.2"
   },
   "devDependencies": {
     "async": "^2.4.0",
@@ -30,7 +30,7 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-watch": "^3.2.2",
     "semver": "^5.3.0",
-    "uglify-js": "^3.0.3"
+    "uglify-js": "^3.0.7"
   },
   "scripts": {
     "build": "npm run prepare && npm run rollup --",
