@@ -3,14 +3,12 @@ import { load as loadRouter } from '@scola/api-router';
 import { load as loadWs } from '@scola/api-ws';
 
 import {
-  CacheFactory,
+  Cache,
   MemCacheClient,
   MemoryClient,
   RedisClient,
-  getList,
-  setList,
-  getObject,
-  setObject
+  cache,
+  respond
 } from '@scola/api-cache';
 
 import {
@@ -35,11 +33,9 @@ import {
 } from '@scola/api-http';
 
 import {
-  PubSubFactory,
+  PubSub,
   publish,
-  subscribe,
-  subscribeList,
-  subscribeObject
+  subscribe
 } from '@scola/api-pubsub';
 
 import {
@@ -59,14 +55,12 @@ function load(app) {
 }
 
 export {
-  CacheFactory,
+  Cache,
   MemCacheClient,
   MemoryClient,
   RedisClient,
-  getList,
-  getObject,
-  setList,
-  setObject,
+  cache,
+  respond,
   formDataCodec,
   formDataFilter,
   jsonCodec,
@@ -82,11 +76,9 @@ export {
   ServerResponse,
   Writer,
   parseHeader,
-  PubSubFactory,
+  PubSub,
   publish,
   subscribe,
-  subscribeList,
-  subscribeObject,
   Router,
   handleError,
   WsConnection,
