@@ -7,7 +7,7 @@ import {
   MemCacheClient,
   MemoryClient,
   RedisClient,
-  cache,
+  cached,
   respond
 } from '@scola/api-cache';
 
@@ -59,7 +59,7 @@ export {
   MemCacheClient,
   MemoryClient,
   RedisClient,
-  cache,
+  cached,
   respond,
   formDataCodec,
   formDataFilter,
