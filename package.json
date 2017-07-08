@@ -39,10 +39,12 @@
     "build:pub": "npm run build && npm run min && npm run gzip:pre",
     "gzip": "gzip -9 -fkr dist/*",
     "gzip:pre": "find dist/ -name '*.gz' -delete",
-    "link": "npm link @scola/api-cache @scola/api-codec @scola/api-http @scola/api-pubsub @scola/api-router @scola/api-ws @scola/error @scola/websocket",
+    "link": "npm run unlink && npm run link:scola",
+    "link:scola": "ln -s $LINK/@scola node_modules/@scola",
     "min": "uglifyjs dist/api.js -m -o dist/api.min.js",
     "prepare": "mkdir -p dist/ && find dist/ -name '*.map' -delete",
     "prepublish": "npm run build:pub",
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "unlink": "rm -rf node_modules/@scola"
   }
 }
