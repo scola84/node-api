@@ -8,29 +8,29 @@
   "main": "./dist/api.js",
   "jsnext:main": "./index.js",
   "dependencies": {
-    "@scola/api-cache": "^1.1.0",
-    "@scola/api-codec": "^2.1.1",
-    "@scola/api-http": "^5.1.1",
-    "@scola/api-pubsub": "^1.0.1",
-    "@scola/api-router": "^4.1.1",
-    "@scola/api-ws": "^6.1.2"
+    "@scola/api-cache": "^2.0.0",
+    "@scola/api-codec": "^2.1.2",
+    "@scola/api-http": "^6.0.0",
+    "@scola/api-pubsub": "^2.0.0",
+    "@scola/api-router": "^5.0.0",
+    "@scola/api-ws": "^6.2.0"
   },
   "devDependencies": {
-    "async": "^2.4.0",
+    "async": "^2.5.0",
     "crypto-js": "^3.1.9-1",
     "lodash-es": "^4.17.4",
     "negotiator": "^0.6.1",
     "path-to-regexp": "^1.7.0",
-    "qs": "^6.4.0",
-    "rollup": "^0.41.6",
+    "qs": "^6.5.0",
+    "rollup": "^0.45.2",
     "rollup-plugin-buble": "^0.15.0",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.1.0",
     "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-watch": "^3.2.2",
-    "semver": "^5.3.0",
-    "uglify-js": "^3.0.7"
+    "rollup-watch": "^4.3.1",
+    "semver": "^5.4.1",
+    "uglify-js": "^3.0.27"
   },
   "scripts": {
     "build": "npm run prepare && npm run rollup --",
