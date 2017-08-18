@@ -24,6 +24,10 @@ import {
 } from '@scola/api-codec';
 
 import {
+  MysqlClient
+} from '@scola/api-database';
+
+import {
   HttpConnection,
   HttpConnector,
   ServerRequest,
@@ -70,6 +74,7 @@ export {
   sodiumCodec,
   urlEncodedCodec,
   urlEncodedFilter,
+  MysqlClient,
   HttpConnection,
   HttpConnector,
   ServerRequest,

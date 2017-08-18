@@ -10,6 +10,7 @@
   "dependencies": {
     "@scola/api-cache": "^2.0.0",
     "@scola/api-codec": "^2.1.2",
+    "@scola/api-database": "^1.0.0",
     "@scola/api-http": "^6.0.0",
     "@scola/api-pubsub": "^2.0.0",
     "@scola/api-router": "^5.0.0",
