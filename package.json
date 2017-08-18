@@ -1,6 +1,6 @@
 {
   "name": "@scola/api",
-  "version": "6.0.0",
+  "version": "6.1.0",
   "description": "Global API",
   "repository": "github:scola84/node-api",
   "author": "M.C. van den Boogaart <scola@kvdb.name>",
