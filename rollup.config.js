@@ -9,10 +9,12 @@ const name = process.argv.indexOf('-w') === -1 ?
   'api.min.js';
 
 export default {
-  dest: './dist/' + name,
-  entry: 'index.js',
-  format: 'umd',
-  moduleName: 'api',
+  input: 'index.js',
+  output: {
+    file: './dist/' + name,
+    format: 'umd'
+  },
+  name: 'api',
   plugins: [
     builtins(),
     resolve({
