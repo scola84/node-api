@@ -5,13 +5,13 @@ import globals from 'rollup-plugin-node-globals';
 import resolve from 'rollup-plugin-node-resolve';
 
 const name = process.argv.indexOf('-w') === -1 ?
-  'api.js' :
-  'api.min.js';
+  'api' :
+  'api.min';
 
 export default {
   input: 'index.js',
   output: {
-    file: './dist/' + name,
+    file: './dist/' + name + '.js',
     format: 'umd'
   },
   name: 'api',
