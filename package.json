@@ -10,10 +10,10 @@
   "dependencies": {
     "@scola/api-cache": "^2.0.1",
     "@scola/api-codec": "^2.1.3",
-    "@scola/api-database": "^1.0.0",
+    "@scola/api-database": "^1.0.1",
     "@scola/api-http": "^6.0.0",
-    "@scola/api-pubsub": "^2.0.0",
-    "@scola/api-router": "^5.0.0",
+    "@scola/api-pubsub": "^3.0.0",
+    "@scola/api-router": "^5.0.1",
     "@scola/api-ws": "^6.2.1"
   },
   "devDependencies": {
@@ -25,7 +25,7 @@
     "qs": "^6.5.0",
     "rollup": "^0.48.2",
     "rollup-plugin-buble": "^0.15.0",
-    "rollup-plugin-commonjs": "^8.1.0",
+    "rollup-plugin-commonjs": "^8.2.0",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.1.0",
     "rollup-plugin-node-resolve": "^3.0.0",
@@ -41,7 +41,7 @@
     "gzip": "gzip -9 -fkr dist/*",
     "gzip:pre": "find dist/ -name '*.gz' -delete",
     "link": "npm run unlink && npm run link:scola",
-    "link:scola": "ln -s $LINK/@scola node_modules/@scola",
+    "link:scola": "ln -s ${LINK:=../../..}/@scola node_modules/@scola",
     "min": "uglifyjs dist/api.js -m -o dist/api.min.js",
     "prepare": "mkdir -p dist/ && find dist/ -name '*.map' -delete",
     "prepublish": "npm run build:pub",
