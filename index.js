@@ -37,6 +37,13 @@ import {
 } from '@scola/api-http';
 
 import {
+  Logger,
+  LogAbstract,
+  LogProcessor,
+  TransformerTask
+} from '@scola/api-logger';
+
+import {
   PubSub,
   publish,
   subscribe
@@ -81,6 +88,10 @@ export {
   ServerResponse,
   Writer,
   parseHeader,
+  Logger,
+  LogAbstract,
+  LogProcessor,
+  TransformerTask,
   PubSub,
   publish,
   subscribe,
