@@ -38,9 +38,8 @@ import {
 
 import {
   Logger,
-  LogAbstract,
-  LogProcessor,
-  TransformerTask
+  TransformTask,
+  transformTask
 } from '@scola/api-logger';
 
 import {
@@ -89,9 +88,8 @@ export {
   Writer,
   parseHeader,
   Logger,
-  LogAbstract,
-  LogProcessor,
-  TransformerTask,
+  TransformTask,
+  transformTask,
   PubSub,
   publish,
   subscribe,
